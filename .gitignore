@@ -1,0 +1,17 @@
+# This repository is a public showcase, not the source.
+#
+# It exists to describe the project and nothing else. The application code,
+# deployment configuration, environment files and build pipeline live in a
+# private repository and must never appear here.
+#
+# So this is a whitelist rather than a blocklist: everything is ignored, and
+# only the write-up and its images are allowed back in. Dropping a source
+# folder or a .env into this directory does nothing, which is the point —
+# a blocklist only protects against the mistakes someone thought of in advance.
+
+*
+
+!.gitignore
+!README.md
+!docs/
+!docs/**

@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 400" width="760" height="400" role="img" aria-label="Architecture diagram: the game engine, React UI and localStorage all run inside the visitor's browser. A Cloudflare CDN serves static files on first load, and Google's ad and analytics scripts are the only third party. There is no server, no database and no accounts.">
+  <title>Where the work happens</title>
+
+  <!-- card -->
+  <rect x="0" y="0" width="760" height="400" rx="14" fill="#1c1611"/>
+  <rect x="0.5" y="0.5" width="759" height="399" rx="13.5" fill="none" stroke="#443a30"/>
+
+  <text x="28" y="34" font-family="ui-serif, Georgia, serif" font-size="17" font-weight="600" fill="#f0ece3">Where the work happens</text>
+  <text x="28" y="52" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="11.5" fill="#8c8377">The game is computed on the visitor&#8217;s device. Nothing of ours runs on a server.</text>
+
+  <!-- ================= browser ================= -->
+  <rect x="28" y="72" width="392" height="296" rx="10" fill="#2b231c" stroke="#5f5245"/>
+  <text x="48" y="97" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="10.5" font-weight="600" letter-spacing="1.4" fill="#d8a94a">YOUR BROWSER</text>
+
+  <!-- engine -->
+  <rect x="48" y="110" width="352" height="66" rx="7" fill="#3a3028" stroke="#5f5245"/>
+  <text x="66" y="133" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="13" font-weight="600" fill="#f0ece3">Game engine</text>
+  <text x="66" y="151" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="11" fill="#b5ac9e">Rules, scoring, both opponents, the coach</text>
+  <text x="66" y="166" font-family="ui-monospace, SF Mono, Menlo, monospace" font-size="10" fill="#8c8377">pure TypeScript &#183; seeded &#183; no DOM, no clock</text>
+
+  <!-- ui -->
+  <rect x="48" y="186" width="352" height="58" rx="7" fill="#3a3028" stroke="#5f5245"/>
+  <text x="66" y="209" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="13" font-weight="600" fill="#f0ece3">React interface</text>
+  <text x="66" y="227" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="11" fill="#b5ac9e">Board, hand, coach overlay, daily puzzle</text>
+
+  <!-- storage -->
+  <rect x="48" y="254" width="352" height="66" rx="7" fill="#3a3028" stroke="#5f5245"/>
+  <text x="66" y="277" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="13" font-weight="600" fill="#f0ece3">Your device&#8217;s own storage</text>
+  <text x="66" y="295" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="11" fill="#b5ac9e">Match in progress, win record, daily streak</text>
+  <text x="66" y="310" font-family="ui-monospace, SF Mono, Menlo, monospace" font-size="10" fill="#8c8377">never transmitted &#183; clearing site data erases it</text>
+
+  <text x="48" y="348" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="11" fill="#8c8377">Works with the network switched off, once loaded.</text>
+
+  <!-- ================= right column ================= -->
+
+  <!-- cdn -->
+  <rect x="470" y="72" width="262" height="92" rx="9" fill="#2b231c" stroke="#5f5245"/>
+  <text x="488" y="97" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="13" font-weight="600" fill="#f0ece3">Cloudflare CDN</text>
+  <text x="488" y="116" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="11" fill="#b5ac9e">Serves static files. That is all.</text>
+  <text x="488" y="134" font-family="ui-monospace, SF Mono, Menlo, monospace" font-size="10" fill="#8c8377">HTML &#183; JS &#183; CSS &#183; icons</text>
+  <text x="488" y="151" font-family="ui-monospace, SF Mono, Menlo, monospace" font-size="10" fill="#8c8377">no code of ours executes here</text>
+
+  <!-- arrow: cdn -> browser -->
+  <line x1="466" y1="118" x2="426" y2="118" stroke="#8c8377" stroke-width="1.4"/>
+  <path d="M424 118 L433 113.5 L433 122.5 Z" fill="#8c8377"/>
+  <text x="445" y="108" text-anchor="middle" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="8.5" fill="#8c8377">first load</text>
+
+  <!-- google -->
+  <rect x="470" y="194" width="262" height="76" rx="9" fill="#241d17" stroke="#443a30" stroke-dasharray="4 3"/>
+  <text x="488" y="216" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="13" font-weight="600" fill="#b5ac9e">Google scripts</text>
+  <text x="488" y="234" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="11" fill="#8c8377">The only third party involved</text>
+  <text x="488" y="252" font-family="ui-monospace, SF Mono, Menlo, monospace" font-size="10" fill="#8c8377">analytics &#183; storage denied by default</text>
+
+  <!-- arrow: google -> browser, dashed -->
+  <line x1="466" y1="232" x2="426" y2="232" stroke="#6e6459" stroke-width="1.4" stroke-dasharray="4 3"/>
+  <path d="M424 232 L433 227.5 L433 236.5 Z" fill="#6e6459"/>
+
+  <!-- absence callout -->
+  <rect x="470" y="300" width="262" height="68" rx="9" fill="none" stroke="#8a6a24"/>
+  <text x="488" y="324" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="11.5" font-weight="600" fill="#d8a94a">No server. No database.</text>
+  <text x="488" y="341" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="11.5" font-weight="600" fill="#d8a94a">No accounts. No API.</text>
+  <text x="488" y="358" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="10" fill="#8c8377">Nothing to breach, because nothing is there.</text>
+</svg>
